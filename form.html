@@ -11,12 +11,25 @@
     <form action="">
         <fieldset>
 
-            <input type="text" name="nome" placeholder="nome" required> <br>
+            <input type="text" name="nome" placeholder="nome" required data-protection="Nome do solicitante"
+                data-protection-name data-protection-sensitive="false" data-protection-anonymizable="true"
+                data-protection-class-contract="Exemplo de justificativa" />> <br>
+
             <input type="email" name="e-mail" id="e-mail" placeholder="e-mail" required> <br>
             <input type="number" name="telefone" id="telefone" placeholder="telefone" required> <br>
-            <button> Enviar </button>
-        
-        
+            <button type="submit"> Enviar </button> <br>
+
+            <!--
+    id                                      =   O 'id' do tag select
+    name                                    =   O 'name' do tag select
+    type                                    =   Tipo de input (text, number..)
+    data-protection                         =   Descrição do campo (usado no controle de dados - sensíveis ou não - do usuário)
+    data-protectiondata-protection-name     =   Tipo de campo. Para nome usar 'name', e-mail usar 'mail'; cpf usar 'cpf'; rg usar 'id; carteira de motorista usar 'driver-license'; título eleitoral para 'voter-id'; carteira de trabalho usar 'work-card'; passaporte usar 'passport'; ou 'other' para 'outros'
+    data-protection-sensitive               =   Este dado é sensível? Informe 'true' caso seja considerado sensível dado sobre origem racial ou étnica, convicção religiosa, opinião política, filiação a sindicato ou a organização de caráter religioso, filosófico ou político, dado referente à saúde ou à vida sexual, dado genético ou biométrico, quando vinculado a uma pessoa natural. Caso contrário, informe 'false' ou remova o atributo depois
+    data-protection-anonymizable            =   Informe 'true' se é considerado possível quando existem meios técnicos razoáveis e disponíveis para tratar o dado a fim de torná-lo anônimo. Caso contrário, informe 'false' ou remova o atributo depois
+    data-protection-class-contract          =   Classificação da coleta do dado. Para execução de contrato usar 'contract', obrigação legal usar 'legal-obligation', consentimento usar 'consent', execução de políticas públicas usar 'public-policies', estudos por órgão de pesquisa usar 'scientific-analysis', exercício regular de direito usar 'dedicated-law', proteção da vida usar 'life-protection', tutela de saúde usar 'guardianship', interesse legítimo usar 'legitimate-interests', proteção de crédito usar 'credit-protection'
+                                                Justificativa para a coleta dos dados
+
         </fieldset>
     </form>
 </body>
